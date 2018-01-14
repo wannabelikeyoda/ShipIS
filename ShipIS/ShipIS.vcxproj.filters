@@ -152,9 +152,6 @@
     <ClInclude Include="FuzzyModel\Statement.h">
       <Filter>FuzzyModel</Filter>
     </ClInclude>
-    <ClInclude Include="NeuralNetwork\MathVelocityCalculator.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="InputParams.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -162,6 +159,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="IceThicknessGenerator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MathVelocityCalculator.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

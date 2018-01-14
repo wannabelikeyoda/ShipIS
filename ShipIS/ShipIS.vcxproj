@@ -177,11 +177,11 @@
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MathVelocityCalculator.h" />
     <ClInclude Include="NeuralNetwork\BackPropNeuronStrategy.h" />
     <ClInclude Include="NeuralNetwork\INeuralNetwork.h" />
     <ClInclude Include="NeuralNetwork\INeuron.h" />
     <ClInclude Include="NeuralNetwork\INeuronStrategy.h" />
-    <ClInclude Include="NeuralNetwork\MathVelocityCalculator.h" />
     <ClInclude Include="NeuralNetwork\NeuralNetwork.h" />
     <ClInclude Include="NeuralNetwork\NeuralNetworkHelper.h" />
     <ClInclude Include="NeuralNetwork\Neuron.h" />

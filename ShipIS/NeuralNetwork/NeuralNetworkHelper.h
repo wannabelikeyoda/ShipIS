@@ -14,7 +14,6 @@ typedef std::shared_ptr<INeuralNetwork> INeuralNetworkPtr;
 class NeuralNetworkHelper
 {
 public:
-    //NeuralNetworkHelper(const std::vector<double>& neurons_in_layers);
     NeuralNetworkHelper()
     {}
     NeuralNetworkHelper( const std::vector<int> neurons_in_layers, const double learning_rate, const TTrainingDataVector& training_data_vector = TTrainingDataVector() );

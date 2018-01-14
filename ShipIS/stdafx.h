@@ -14,5 +14,7 @@
 #include <ctime>
 #include <iostream>
 #include <iomanip>
+#include <algorithm>
+
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы
