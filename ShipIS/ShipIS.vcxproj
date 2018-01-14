@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4CED3473-D9E4-4498-83B8-34B532E0DF6D}</ProjectGuid>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>ShipIS</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -29,28 +29,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -104,6 +104,7 @@
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalOptions>-mwindows %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -135,37 +136,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fgjgm.cpp" />
+    <ClCompile Include="FuzzyLogicForm.cpp" />
+    <ClCompile Include="FuzzyModel\FuzzySet.cpp" />
+    <ClCompile Include="FuzzyModel\MamdaniAlgorithm.cpp" />
+    <ClCompile Include="FuzzyModel\RulesBase.cpp" />
     <ClCompile Include="GraphBlock.cpp" />
     <ClCompile Include="GraphDataGenerator.cpp" />
+    <ClCompile Include="GraphsComprasionForm.cpp" />
+    <ClCompile Include="IceThicknessGenerator.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="NeuralNetwork\BackPropNeuronStrategy.cpp" />
-    <ClCompile Include="NeuralNetwork\IceThicknessGenerator.cpp" />
     <ClCompile Include="NeuralNetwork\NeuralNetwork.cpp" />
     <ClCompile Include="NeuralNetwork\NeuralNetworkHelper.cpp" />
     <ClCompile Include="NeuralNetwork\Neuron.cpp" />
     <ClCompile Include="NeuralNetwork\NeuronConnection.cpp" />
     <ClCompile Include="NeuralNetwork\NeuronNetworkFactory.cpp" />
-    <ClCompile Include="NeuralNetwork\stdafx.cpp" />
     <ClCompile Include="NeuralNetwork\TrainingData.cpp" />
+    <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="TrainNetworkForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DiagramDrawer.h" />
-    <ClInclude Include="fgjgm.h">
+    <ClInclude Include="FuzzyLogicForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FuzzyModel\Conclusion.h" />
+    <ClInclude Include="FuzzyModel\Condition.h" />
+    <ClInclude Include="FuzzyModel\FuzzySet.h" />
+    <ClInclude Include="FuzzyModel\MamdaniAlgorithm.h" />
+    <ClInclude Include="FuzzyModel\Rule.h" />
+    <ClInclude Include="FuzzyModel\RulesBase.h" />
+    <ClInclude Include="FuzzyModel\Statement.h" />
     <ClInclude Include="GraphBlock.h" />
     <ClInclude Include="GraphDataGenerator.h" />
+    <ClInclude Include="GraphsComprasionForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="IceThicknessGenerator.h" />
+    <ClInclude Include="InputParams.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="NeuralNetwork\BackPropNeuronStrategy.h" />
-    <ClInclude Include="NeuralNetwork\IceThicknessGenerator.h" />
     <ClInclude Include="NeuralNetwork\INeuralNetwork.h" />
     <ClInclude Include="NeuralNetwork\INeuron.h" />
     <ClInclude Include="NeuralNetwork\INeuronStrategy.h" />
-    <ClInclude Include="NeuralNetwork\InputParams.h" />
     <ClInclude Include="NeuralNetwork\MathVelocityCalculator.h" />
     <ClInclude Include="NeuralNetwork\NeuralNetwork.h" />
     <ClInclude Include="NeuralNetwork\NeuralNetworkHelper.h" />
@@ -180,12 +195,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="fgjgm.resx">
-      <DependentUpon>fgjgm.h</DependentUpon>
+    <EmbeddedResource Include="FuzzyLogicForm.resx">
+      <DependentUpon>FuzzyLogicForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphsComprasionForm.resx">
+      <DependentUpon>GraphsComprasionForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

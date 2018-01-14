@@ -1,7 +1,6 @@
 #ifndef TRAINING_DATA_H
 #define TRAINING_DATA_H
 
-#include "stdafx.h"
 
 class TrainingData
 {

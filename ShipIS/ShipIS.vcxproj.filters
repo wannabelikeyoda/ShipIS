@@ -16,15 +16,15 @@
     <Filter Include="NeuralNetwork">
       <UniqueIdentifier>{a2c4b7ac-6362-4c2b-81b6-f5e058f949fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FuzzyModel">
+      <UniqueIdentifier>{810554e6-210f-4032-adb4-5d63bde22896}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NeuralNetwork\BackPropNeuronStrategy.cpp">
-      <Filter>NeuralNetwork</Filter>
-    </ClCompile>
-    <ClCompile Include="NeuralNetwork\IceThicknessGenerator.cpp">
       <Filter>NeuralNetwork</Filter>
     </ClCompile>
     <ClCompile Include="NeuralNetwork\NeuralNetwork.cpp">
@@ -45,19 +45,34 @@
     <ClCompile Include="NeuralNetwork\TrainingData.cpp">
       <Filter>NeuralNetwork</Filter>
     </ClCompile>
-    <ClCompile Include="NeuralNetwork\stdafx.cpp">
-      <Filter>NeuralNetwork</Filter>
-    </ClCompile>
     <ClCompile Include="TrainNetworkForm.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="fgjgm.cpp">
-      <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphBlock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphDataGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyLogicForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphsComprasionForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyModel\FuzzySet.cpp">
+      <Filter>FuzzyModel</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyModel\MamdaniAlgorithm.cpp">
+      <Filter>FuzzyModel</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyModel\RulesBase.cpp">
+      <Filter>FuzzyModel</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IceThicknessGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,9 +86,6 @@
     <ClInclude Include="NeuralNetwork\BackPropNeuronStrategy.h">
       <Filter>NeuralNetwork</Filter>
     </ClInclude>
-    <ClInclude Include="NeuralNetwork\IceThicknessGenerator.h">
-      <Filter>NeuralNetwork</Filter>
-    </ClInclude>
     <ClInclude Include="NeuralNetwork\INeuralNetwork.h">
       <Filter>NeuralNetwork</Filter>
     </ClInclude>
@@ -81,12 +93,6 @@
       <Filter>NeuralNetwork</Filter>
     </ClInclude>
     <ClInclude Include="NeuralNetwork\INeuronStrategy.h">
-      <Filter>NeuralNetwork</Filter>
-    </ClInclude>
-    <ClInclude Include="NeuralNetwork\InputParams.h">
-      <Filter>NeuralNetwork</Filter>
-    </ClInclude>
-    <ClInclude Include="NeuralNetwork\MathVelocityCalculator.h">
       <Filter>NeuralNetwork</Filter>
     </ClInclude>
     <ClInclude Include="NeuralNetwork\NeuralNetwork.h">
@@ -110,13 +116,7 @@
     <ClInclude Include="NeuralNetwork\TrainingData.h">
       <Filter>NeuralNetwork</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>NeuralNetwork</Filter>
-    </ClInclude>
     <ClInclude Include="TrainNetworkForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="fgjgm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GraphBlock.h">
@@ -125,13 +125,59 @@
     <ClInclude Include="GraphDataGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GraphsComprasionForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogicForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyModel\Conclusion.h">
+      <Filter>FuzzyModel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyModel\Condition.h">
+      <Filter>FuzzyModel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyModel\FuzzySet.h">
+      <Filter>FuzzyModel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyModel\MamdaniAlgorithm.h">
+      <Filter>FuzzyModel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyModel\Rule.h">
+      <Filter>FuzzyModel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyModel\RulesBase.h">
+      <Filter>FuzzyModel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyModel\Statement.h">
+      <Filter>FuzzyModel</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNetwork\MathVelocityCalculator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputParams.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IceThicknessGenerator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="fgjgm.resx">
+    <EmbeddedResource Include="FuzzyLogicForm.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="GraphsComprasionForm.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

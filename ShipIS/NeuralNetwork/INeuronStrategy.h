@@ -1,7 +1,6 @@
 #ifndef I_NEURON_STRATEGY_H 
 #define I_NEURON_STRATEGY_H
 
-#include "stdafx.h"
 #include "NeuronConnection.h"
 
 class NeuronConnection;

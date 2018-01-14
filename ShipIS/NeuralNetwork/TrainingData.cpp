@@ -1,5 +1,7 @@
+#include "../stdafx.h"
 #include "TrainingData.h"
-;
+
+
 TrainingData::TrainingData(const std::vector<double>& input, const std::vector<double>& output)
 	: m_InputValues(input), m_OutputValues(output)
 {}
@@ -31,7 +33,7 @@ std::vector<double>& TrainingData::GetInputValues()
 	return m_InputValues;
 }
 
-double TrainingData::GetOutputValueByIndex(const int & index)
+double TrainingData::GetOutputValueByIndex(const int& index)
 {
 	if (index < m_OutputValues.size())
 	{

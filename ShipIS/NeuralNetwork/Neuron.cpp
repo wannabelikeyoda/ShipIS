@@ -1,4 +1,5 @@
 #include "Neuron.h"
+#include "../stdafx.h"
 
 Neuron::Neuron(const INeuronStrategyPtr& strategy)
 	: m_Strategy(strategy), m_Inputs(), m_ForwardNeurons()

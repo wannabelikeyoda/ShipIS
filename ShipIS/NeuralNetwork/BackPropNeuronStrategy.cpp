@@ -1,3 +1,4 @@
+#include "../stdafx.h"
 #include "BackPropNeuronStrategy.h"
 
 BackPropNeuronStrategy::BackPropNeuronStrategy(const double & learning_rate)

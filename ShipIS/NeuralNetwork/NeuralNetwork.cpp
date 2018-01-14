@@ -6,7 +6,7 @@ INeuralNetworkPtr NeuralNetwork::Clone() const
 	return std::make_shared<NeuralNetwork>(*this);
 }
 
-NeuralNetwork::NeuralNetwork(const INeuronStrategyPtr & stratregy, const std::vector<int>& neurons_in_layers)
+NeuralNetwork::NeuralNetwork(const INeuronStrategyPtr& stratregy, const std::vector<int>& neurons_in_layers)
 {
 	for each (auto& neurons_count in neurons_in_layers)
 	{

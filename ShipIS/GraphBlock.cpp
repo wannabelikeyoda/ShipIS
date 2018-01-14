@@ -11,6 +11,7 @@ GraphBlock::GraphBlock( ZedGraphControl ^ zed_graph, ComboBox ^ combo_box_type, 
 	graph_types["Math velocity"] = MATH;
 	graph_types["Neural velocity"] = NEURAL;
 	graph_types["Fuzzy velocity"] = FUZZY;
+	graph_types["Prefer velocity"] = PREFER;
 	m_GraphTypes = new std::map<std::string, int>( graph_types );
 
 	std::map<std::string, int> graph_color;
@@ -31,13 +32,14 @@ GraphBlock::GraphBlock( ZedGraphControl ^ zed_graph, ComboBox ^ combo_box_type, 
 	this->m_ComboBoxGraphType->FormattingEnabled = true;
 	this->m_ComboBoxGraphType->Location = begin_point;
 	this->m_ComboBoxGraphType->Name = L"ComboBoxGraphType";
-	this->m_ComboBoxGraphType->Items->AddRange( gcnew array<Object^>( 5 )
+	this->m_ComboBoxGraphType->Items->AddRange( gcnew array<Object^>( 6 )
 	{
 		L"Nothing",
 			L"Ice thickness",
 			L"Math velocity",
 			L"Neural velocity",
-			L"Fuzzy velocity"
+			L"Fuzzy velocity",
+			L"Prefer velocity"
 	}
 	);
 	this->m_ComboBoxGraphType->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
@@ -125,8 +127,13 @@ System::Void GraphBlock::DrawGraphBlock( GraphDataGenerator^ generator, int capa
 		y_max_value = generator->GetParams()->max_velocity;
 		break;
 	case FUZZY:
-		ClearGraph( m_ZedGraph );
-		return;
+		data = generator->GetFuzzyVelocity();
+		y_max_value = generator->GetParams()->max_velocity;
+		break;
+	case PREFER:
+		data = generator->GetPreferVelocity();
+		y_max_value = generator->GetParams()->max_velocity;
+		break;
 	case NOTHING:
 		ClearGraph( m_ZedGraph );
 		return;

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Neuron">
+    <Position X="1.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QkIIJAAAAAABAAggAAAABIABEAAAAEIQAEAAABACAAA=</HashCode>
+      <FileName>NeuralNetwork\Neuron.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="INeuron">
+    <Position X="4" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QgIIIAAAAAABAAggAAAABAAAEAAAAAAAAEAAABACAAA=</HashCode>
+      <FileName>NeuralNetwork\INeuron.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="INeuralNetwork">
+    <Position X="4" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAIJAAAAAIAABARAAAgAABACAAAAAgAoAAAAAAAABA=</HashCode>
+      <FileName>NeuralNetwork\INeuralNetwork.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="INeuronStrategy">
+    <Position X="6" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAABAAAAgAAAAAAACAAEAA=</HashCode>
+      <FileName>NeuralNetwork\INeuronStrategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BackPropNeuronStrategy">
+    <Position X="8.25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAEBEAAABAAAAgAAAAAAACAAEAA=</HashCode>
+      <FileName>NeuralNetwork\BackPropNeuronStrategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetwork">
+    <Position X="7.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAIJAAAAAIAABARAAAgAARACAAAAAgAoAgAAAAAABA=</HashCode>
+      <FileName>NeuralNetwork\NeuralNetwork.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworkHelper">
+    <Position X="10.5" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAQAAKAAAIAACBAAAAIAIAAAAAgAAAAAAAAAAgA=</HashCode>
+      <FileName>NeuralNetwork\NeuralNetworkHelper.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuronNetworkFactory">
+    <Position X="10.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetwork\NeuronNetworkFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="NeuronLayer">
+    <Position X="11" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetwork\NeuronLayer.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

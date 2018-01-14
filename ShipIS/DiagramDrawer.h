@@ -17,8 +17,8 @@ namespace ShipIS
 
 		int labelsFontSize = 25;
 
-		pane->XAxis->Scale->FontSpec->Size = labelsFontSize;
-		pane->YAxis->Scale->FontSpec->Size = labelsFontSize;
+		pane->XAxis->Scale->FontSpec->Size = (float)labelsFontSize;
+		pane->YAxis->Scale->FontSpec->Size = (float)labelsFontSize;
 
 		pane->XAxis->Scale->MajorStep = x_max / 10.0;
 		pane->XAxis->Scale->MinorStep = x_max / 50.0;
@@ -43,6 +43,18 @@ namespace ShipIS
 		zedGraphControl->Invalidate();
 	}
 
+	static System::Void ClearTitles( ZedGraph::ZedGraphControl^ zedGraphControl )
+	{
+		GraphPane^ pane = zedGraphControl->GraphPane;
+
+		pane->XAxis->Title->IsVisible = false;
+		pane->YAxis->Title->IsVisible = false;
+		pane->Title->Text = " ";
+		pane->Title->FontSpec->Size = 15;
+		zedGraphControl->AxisChange();
+		zedGraphControl->Invalidate();
+	}
+
 	static System::Void DrawGraph(ZedGraph::ZedGraphControl^ zedGraphControl, List<double>^ data, Color color, const double& interval)
 	{
 		GraphPane^ pane = zedGraphControl->GraphPane;
@@ -63,6 +75,34 @@ namespace ShipIS
 		zedGraphControl->Invalidate();
 	}
 
+	static System::Void DrawCurve( ZedGraph::ZedGraphControl^ zedGraphControl, List<double>^ data, Color color, String^ name,  const double& interval )
+	{
+		GraphPane^ pane = zedGraphControl->GraphPane;
+
+		PointPairList^ list = gcnew PointPairList();
+
+		double curr_x = pane->XAxis->Scale->Min;
+		for ( int i = 0; i < data->Count; i++ )
+		{
+			list->Add( curr_x, data[i] );
+			curr_x += interval;
+		}
+
+		LineItem^ myCurve = pane->AddCurve( name, list, color, SymbolType::None );
+		myCurve->Label->FontSpec = gcnew ZedGraph::FontSpec();
+		myCurve->Label->FontSpec->Size = 20;
+		myCurve->Line->Color = color;
+		zedGraphControl->AxisChange();
+		zedGraphControl->Invalidate();
+	}
+
+	static System::Void ClearCurves( ZedGraph::ZedGraphControl^ zedGraphControl )
+	{
+		GraphPane^ pane = zedGraphControl->GraphPane;
+		pane->CurveList->Clear();
+		zedGraphControl->AxisChange();
+		zedGraphControl->Invalidate();
+	}
 	static System::Void ClearGraph(ZedGraph::ZedGraphControl^ zedGraphControl)
 	{
 		GraphPane^ pane = zedGraphControl->GraphPane;

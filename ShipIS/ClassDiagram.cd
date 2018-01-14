@@ -1,2 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FuzzySet">
+    <Position X="6" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAIAgIIAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>FuzzySet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IFuzzySet">
+    <Position X="8.25" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAACAAACAAAAACAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>FuzzySet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Condition">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Typedef Name="Condition::base" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Condition.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Condition.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conclusion">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Typedef Name="Conclusion::base" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Conclusion.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAIIAACAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Conclusion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActivatedFuzzySet">
+    <Position X="6" Y="3" Width="2.5" />
+    <NestedTypes>
+      <Typedef Name="ActivatedFuzzySet::base" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FuzzySet.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJABAAACAAAAAAAAAAAACAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>FuzzySet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Statement">
+    <Position X="3.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAiAAAQAAIAAAAAAAAAQAA=</HashCode>
+      <FileName>Statement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="fuzzy::MamdaniAlgorithm">
+    <Position X="10.75" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAEgAAAAAQCAgAYAAAAACEKAAAAAAIAAAAIAJA=</HashCode>
+      <FileName>MamdaniAlgorithm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="fuzzy::Rule">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAEAAAAAAAAAAAAAAEAAAAIAAAAAAAAAAABA=</HashCode>
+      <FileName>Rule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="fuzzy::RulesBase">
+    <Position X="8.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABIEAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>RulesBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnionOfFuzzySets">
+    <Position X="8.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAQAABAACAAAg=</HashCode>
+      <FileName>FuzzySet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

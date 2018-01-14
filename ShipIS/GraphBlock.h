@@ -12,7 +12,8 @@ enum GraphType
 	ICE,
 	MATH,
 	NEURAL,
-	FUZZY
+	FUZZY,
+	PREFER
 };
 enum GraphColor
 {

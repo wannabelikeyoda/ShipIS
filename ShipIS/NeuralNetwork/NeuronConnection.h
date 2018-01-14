@@ -1,7 +1,7 @@
 #ifndef NEURON_CONNECTION_H
 #define NEURON_CONNECTION_H
 
-#include "stdafx.h"
+#include "../stdafx.h"
 
 class INeuron;
 typedef std::shared_ptr<INeuron> INeuronPtr;

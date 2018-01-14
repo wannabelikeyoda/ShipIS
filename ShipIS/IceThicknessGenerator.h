@@ -1,9 +1,9 @@
-ifndef ICE_THICKNESS_GENERATOR_H 
+#ifndef ICE_THICKNESS_GENERATOR_H 
 #define ICE_THICKNESS_GENERATOR_H 
 
 #include "stdafx.h"
 #include "InputParams.h"
-#include "TrainingData.h"
+#include "NeuralNetwork/TrainingData.h"
 
 class IceThicknessGenerator
 {

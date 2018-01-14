@@ -1,7 +1,6 @@
 #ifndef I_NEURON_H 
 #define I_NEURON_H
 
-#include "stdafx.h"
 #include "NeuronConnection.h"
 #include "INeuronStrategy.h"
 
