@@ -5,7 +5,6 @@
 #include "InputParams.h"
 #include "MathVelocityCalculator.h"
 
-using namespace fuzzy;
 using namespace neural;
 
 namespace ShipIS

@@ -1,11 +1,9 @@
 #pragma once
-#include "stdafx.h"
-#include "DiagramDrawer.h"
-#include "GraphDataGenerator.h"
-#include <map>
-#include <msclr\marshal_cppstd.h>
+
 namespace ShipIS
 {
+
+ref class GraphDataGenerator;
 enum GraphType
 {
 	NOTHING,

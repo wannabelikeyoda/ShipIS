@@ -89,6 +89,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -137,14 +139,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FuzzyLogicForm.cpp" />
+    <ClCompile Include="FuzzyModel\Conclusion.cpp" />
+    <ClCompile Include="FuzzyModel\Condition.cpp" />
     <ClCompile Include="FuzzyModel\FuzzySet.cpp" />
     <ClCompile Include="FuzzyModel\MamdaniAlgorithm.cpp" />
     <ClCompile Include="FuzzyModel\RulesBase.cpp" />
+    <ClCompile Include="FuzzyModel\Statement.cpp" />
     <ClCompile Include="GraphBlock.cpp" />
     <ClCompile Include="GraphDataGenerator.cpp" />
     <ClCompile Include="GraphsComprasionForm.cpp" />
     <ClCompile Include="IceThicknessGenerator.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="MathVelocityCalculator.cpp" />
     <ClCompile Include="NeuralNetwork\BackPropNeuronStrategy.cpp" />
     <ClCompile Include="NeuralNetwork\NeuralNetwork.cpp" />
     <ClCompile Include="NeuralNetwork\NeuralNetworkHelper.cpp" />

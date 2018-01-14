@@ -6,6 +6,8 @@
 class IceThicknessGenerator;
 typedef std::shared_ptr<IceThicknessGenerator> IceThicknessGeneratorPtr;
 
+struct InputParams;
+
 class IceThicknessGenerator
 {
 public:

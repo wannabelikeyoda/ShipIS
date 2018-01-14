@@ -1,10 +1,10 @@
 #pragma once
-#include "NeuralNetwork/NeuralNetworkHelper.h"
-#include "NeuralNetwork/NeuronNetworkFactory.h"
+
 #include "FuzzyModel/MamdaniAlgorithm.h"
-#include "IceThicknessGenerator.h"
-#include "InputParams.h"
-#include "MathVelocityCalculator.h"
+#include "NeuralNetwork/NeuralNetwork.h"
+
+struct InputParams;
+class IceThicknessGenerator;
 
 namespace ShipIS
 {
@@ -41,7 +41,7 @@ public:
 	{
 		return m_PreferVelocityData;
 	}
-	NeuralNetwork* GetNeuralNetwork()
+    neural::NeuralNetwork* GetNeuralNetwork()
 	{
 		return m_NeuralNetwork;
 	}
@@ -50,7 +50,7 @@ private:
 	InputParams* m_Params;
 	IceThicknessGenerator* m_Generator;
 	fuzzy::MamdaniAlgorithm* m_Mamdani;
-	NeuralNetwork* m_NeuralNetwork;
+    neural::NeuralNetwork* m_NeuralNetwork;
 	List<double>^ m_IceThicknessData;
 	List<double>^ m_MathVelocityData;
 	List<double>^ m_NeuralVelocityData;

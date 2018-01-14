@@ -7,6 +7,8 @@
 
 using namespace ZedGraph;
 const int _capacity = 100;
+using namespace neural;
+using namespace fuzzy;
 
 namespace ShipIS
 {

@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <algorithm>
 #include <list>
 #include <vector>
 #include <memory>
@@ -14,7 +15,8 @@
 #include <ctime>
 #include <iostream>
 #include <iomanip>
-#include <algorithm>
+#include <map>
+#include <msclr\marshal_cppstd.h>
 
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы

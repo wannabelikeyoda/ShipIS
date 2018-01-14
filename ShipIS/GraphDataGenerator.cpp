@@ -1,11 +1,21 @@
+#include "stdafx.h"
+//#include "FuzzyModel/Rule.h"
+//#include "FuzzyModel/Conclusion.h"
+//#include "FuzzyModel/Condition.h"
+//#include "FuzzyModel/RulesBase.h"
+//#include "NeuralNetwork/NeuralNetworkHelper.h"
+
+#include "NeuralNetwork/NeuronNetworkFactory.h"
+#include "IceThicknessGenerator.h"
+#include "InputParams.h"
+#include "MathVelocityCalculator.h"
 #include "GraphDataGenerator.h"
-#include "FuzzyModel/RulesBase.h"
 
 namespace ShipIS
 {
-ShipIS::GraphDataGenerator::GraphDataGenerator()
+GraphDataGenerator::GraphDataGenerator()
 {
-	m_NeuralNetwork = new NeuralNetwork( NeuronNetworkFactory::CreateNetwork( { 4,4,1 }, 0.5 ) );
+	m_NeuralNetwork = new neural::NeuralNetwork( neural::NeuronNetworkFactory::CreateNetwork( { 4,4,1 }, 0.5 ) );
 	m_Mamdani = new fuzzy::MamdaniAlgorithm( 2, 1 );
 	m_IceThicknessData = gcnew List<double>(30);
 	m_MathVelocityData = gcnew List<double>( 30 );

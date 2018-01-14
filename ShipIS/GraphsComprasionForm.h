@@ -1,6 +1,7 @@
 #pragma once
 #include "DiagramDrawer.h"
 #include "GraphDataGenerator.h"
+#include "InputParams.h"
 
 namespace ShipIS
 {

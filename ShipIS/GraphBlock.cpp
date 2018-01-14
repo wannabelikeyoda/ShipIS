@@ -1,5 +1,8 @@
+#include "stdafx.h"
+#include "DiagramDrawer.h"
+#include "GraphDataGenerator.h"
 #include "GraphBlock.h"
-
+#include "InputParams.h"
 namespace ShipIS
 {
 

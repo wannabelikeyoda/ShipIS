@@ -75,6 +75,18 @@
     <ClCompile Include="IceThicknessGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FuzzyModel\Statement.cpp">
+      <Filter>FuzzyModel</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyModel\Conclusion.cpp">
+      <Filter>FuzzyModel</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyModel\Condition.cpp">
+      <Filter>FuzzyModel</Filter>
+    </ClCompile>
+    <ClCompile Include="MathVelocityCalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
