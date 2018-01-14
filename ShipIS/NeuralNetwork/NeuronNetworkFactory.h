@@ -1,9 +1,9 @@
 #ifndef NEURON_NETWORK_FACTORY_H
 #define NEURON_NETWORK_FACTORY_H
 
-#include "NeuralNetwork.h"
 namespace neural
 {
+class NeuralNetwork;
 class NeuronNetworkFactory
 {
 public:

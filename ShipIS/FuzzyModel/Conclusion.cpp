@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "Statement.h"
 #include "Conclusion.h"
 
 fuzzy::Conclusion::Conclusion( const FuzzySet& fuzzy_set, const int input_variable_id, const std::string& name )

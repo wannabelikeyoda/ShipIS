@@ -1,8 +1,8 @@
 #ifndef RULES_BASE_H 
 #define RULES_BASE_H
 
-#include "../IceThicknessGenerator.h"
 
+class IceThicknessGenerator;
 namespace fuzzy
 {
 

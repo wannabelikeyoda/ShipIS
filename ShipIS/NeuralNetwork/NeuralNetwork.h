@@ -2,9 +2,12 @@
 #define NEURAL_NETWORK_H
 
 #include "INeuralNetwork.h"
+#include "NeuronLayer.h"
 
 namespace neural
 {
+class NeuronLayer;
+typedef std::vector<NeuronLayer> TNeuronLayers;
 
 class INeuronStrategy;
 typedef std::shared_ptr<INeuronStrategy> INeuronStrategyPtr;

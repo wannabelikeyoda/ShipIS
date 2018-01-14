@@ -1,10 +1,11 @@
 #ifndef I_NEURAL_NETWORK_H
 #define I_NEURAL_NETWORK_H
 
-#include "NeuronLayer.h"
 
 namespace neural
 {
+class NeuronLayer;
+typedef std::vector<NeuronLayer> TNeuronLayers;
 
 class INeuron;
 typedef std::shared_ptr<INeuron> INeuronPtr;

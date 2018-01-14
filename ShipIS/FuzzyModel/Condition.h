@@ -5,8 +5,6 @@
 
 namespace fuzzy
 {
-class FuzzySet;
-
 class Condition : public Statement
 {
 	typedef Statement base;
