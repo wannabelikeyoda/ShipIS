@@ -5,7 +5,9 @@
 
 namespace fuzzy
 {
+
 class Rule;
+enum MembershipFunc5;
 
 class RulesBase
 {

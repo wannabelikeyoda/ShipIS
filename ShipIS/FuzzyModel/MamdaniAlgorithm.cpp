@@ -9,6 +9,20 @@
 
 namespace fuzzy
 {
+MamdaniAlgorithm::MamdaniAlgorithm( const int & input_variables, const int & output_variables )
+{
+    m_Rules = std::make_shared<RulesBase>();
+    m_NumberOfInputVariables = input_variables;
+    m_NumberOfOutputVariables = output_variables;
+}
+
+MamdaniAlgorithm::MamdaniAlgorithm( const RulesBasePtr & rules )
+    : m_Rules( rules )
+{}
+RulesBasePtr MamdaniAlgorithm::GetRulesBase()
+{
+    return m_Rules;
+}
 void MamdaniAlgorithm::SetRules( const RulesBasePtr& rules )
 {
     m_Rules = rules;
@@ -62,7 +76,7 @@ std::vector<double> MamdaniAlgorithm::Aggregation( const std::vector<double>& fu
         double truthOfConditions = 1.0;
         for ( Condition condition : rule.GetConditions() )
         {
-            truthOfConditions = std::min( truthOfConditions, fuzzyfied_data[i] );
+            truthOfConditions = ( truthOfConditions < fuzzyfied_data[i] ) ? truthOfConditions : fuzzyfied_data[i];   //min
             i++;
         }
         aggregated_data.push_back( truthOfConditions );

@@ -1,7 +1,7 @@
 #ifndef MAMDANI_ALGORITHM_H 
 #define MAMDANI_ALGORITHM_H
 
-class InputParams;
+struct InputParams;
 
 namespace fuzzy
 {
@@ -14,20 +14,11 @@ class UnionOfFuzzySets;
 class MamdaniAlgorithm
 {
 public:
-	MamdaniAlgorithm( const int& input_variables, const int& output_variables )
-	{
-		m_Rules = std::make_shared<RulesBase>();
-		m_NumberOfInputVariables = input_variables;
-		m_NumberOfOutputVariables = output_variables;
-	}
+    MamdaniAlgorithm( const int& input_variables, const int& output_variables );
 
-	MamdaniAlgorithm( const RulesBasePtr& rules )
-		: m_Rules( rules )
-	{}
-	RulesBasePtr GetRulesBase()
-	{
-		return m_Rules;
-	}
+    MamdaniAlgorithm( const RulesBasePtr& rules );
+
+    RulesBasePtr GetRulesBase();
 	void SetRules( const RulesBasePtr& rules );
 	void SetParams( const InputParams* params );
 	std::vector<double> Execute( const std::vector<double>& input_data );

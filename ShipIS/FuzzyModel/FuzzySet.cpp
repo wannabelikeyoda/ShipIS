@@ -132,9 +132,9 @@ double ActivatedFuzzySet::GetValue( const double& input_variable ) const
 	return GetActivatedValue( input_variable );
 }
 
-double ActivatedFuzzySet::GetActivatedValue( const double&  input_variable ) const
+double ActivatedFuzzySet::GetActivatedValue( const double& input_variable ) const
 {
-	return std::min( base::GetValue( input_variable ), m_TruthDegree );
+    return ( base::GetValue( input_variable ) < m_TruthDegree ) ? base::GetValue( input_variable ) : m_TruthDegree;   //min
 }
 
 void ActivatedFuzzySet::SetTruthDegree( const double& truth_degree )
@@ -152,12 +152,12 @@ double UnionOfFuzzySets::GetValue( const double& input_variable ) const
 	return GetMaxValue( input_variable );
 }
 
-double UnionOfFuzzySets::GetMaxValue( const double & input_value ) const
+double UnionOfFuzzySets::GetMaxValue( const double& input_value ) const
 {
 	double result = 0.0;
 	for ( IFuzzySetPtr fuzzy_set : m_FuzzySets )
 	{
-		result = std::max( result, fuzzy_set->GetValue( input_value ) );
+		result = ( fuzzy_set->GetValue( input_value ) > result ) ? fuzzy_set->GetValue( input_value ) : result;    //max
 	}
 	return result;
 }
