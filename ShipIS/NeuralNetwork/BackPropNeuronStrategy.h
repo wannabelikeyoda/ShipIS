@@ -1,10 +1,10 @@
 #ifndef BACK_PROP_NEURON_STRATEGY_H 
 #define BACK_PROP_NEURON_STRATEGY_H
 
+#include "INeuronStrategy.h"
+
 namespace neural
 {
-class INeuronStrategy;
-
 class BackPropNeuronStrategy : public INeuronStrategy
 {
 public:

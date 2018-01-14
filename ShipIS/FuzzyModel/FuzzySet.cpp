@@ -4,6 +4,64 @@
 
 namespace fuzzy
 {
+
+double IFuzzySet::GetCommonValue( const int func, const double& min, const double& max )
+{
+    double value = 0;
+    if ( max <= min )
+    {
+        return -1;
+    }
+    std::vector<double> divided_values = DivideIntervalOnCountWithoutEdge( min, max, 5 );
+
+    return divided_values[func];
+};
+
+MembershipFunc5 IFuzzySet::GetFuzzyValue( const double& value, const double& min, const double& max )
+{
+    std::vector<double> divided_values = DivideIntervalOnCountWithoutEdge( min, max, 5 );
+    for ( auto i = 0; i < (int)divided_values.size(); i++ )
+    {
+        if ( value < divided_values[i] )
+        {
+            if ( i == 0 )
+                return MembershipFunc5( i );
+
+            double to_more = std::abs( value - divided_values[i] );
+            double to_less = std::abs( value - divided_values[i - 1] );
+
+            if ( to_less < to_more )
+                return MembershipFunc5( i - 1 );
+            else
+                return MembershipFunc5( i );
+        }
+    }
+    return MembershipFunc5( divided_values.size() - 1 );
+
+}
+
+std::vector<double> IFuzzySet::DivideIntervalOnCount( const double& min, const double& max, const int& count )
+{
+    std::vector<double> divided_values;
+    double step = ( max - min ) / ( count + 1.0 );
+    for ( int i = 1; i <= count; i++ )
+    {
+        divided_values.push_back( min + i*step );
+    }
+    return divided_values;
+}
+
+std::vector<double> IFuzzySet::DivideIntervalOnCountWithoutEdge( const double& min, const double& max, const int& count )
+{
+    std::vector<double> divided_values;
+    double step = ( max - min ) / ( count - 2.0 );
+    for ( int i = 0; i <= count; i++ )
+    {
+        divided_values.push_back( min + i*step );
+    }
+    return divided_values;
+}
+
 double FuzzySet::GetValue( const double& input_variable ) const
 {
 	double value = 0;

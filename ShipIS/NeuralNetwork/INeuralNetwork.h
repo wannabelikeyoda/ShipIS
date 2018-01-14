@@ -1,14 +1,19 @@
 #ifndef I_NEURAL_NETWORK_H
 #define I_NEURAL_NETWORK_H
 
+#include "NeuronLayer.h"
+
 namespace neural
 {
+
+class INeuron;
+typedef std::shared_ptr<INeuron> INeuronPtr;
+
 class TrainingData;
 typedef std::shared_ptr<TrainingData> TrainingDataPtr;
 
-class INeuronPtr;
-class NeuronLayer;
-typedef std::vector<NeuronLayer> TNeuronLayers;
+class INeuralNetwork;
+typedef std::shared_ptr<INeuralNetwork> INeuralNetworkPtr;
 
 class INeuralNetwork
 {
@@ -32,7 +37,6 @@ public:
     virtual void PrintOutputValues() = 0;
 };
 
-typedef std::shared_ptr<INeuralNetwork> INeuralNetworkPtr;
 }
 
 #endif // I_NEURAL_NETWORK_H

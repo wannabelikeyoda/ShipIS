@@ -1,11 +1,13 @@
 #ifndef NEURAL_NETWORK_H
 #define NEURAL_NETWORK_H
 
+#include "INeuralNetwork.h"
+
 namespace neural
 {
-class INeuralNetwork;
-//class INeuronStrategy;
-//typedef std::shared_ptr<INeuronStrategy> INeuronStrategyPtr;
+
+class INeuronStrategy;
+typedef std::shared_ptr<INeuronStrategy> INeuronStrategyPtr;
 
 class NeuralNetwork : public INeuralNetwork
 {

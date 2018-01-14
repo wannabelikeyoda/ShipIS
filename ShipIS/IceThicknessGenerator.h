@@ -1,9 +1,9 @@
 #ifndef ICE_THICKNESS_GENERATOR_H 
 #define ICE_THICKNESS_GENERATOR_H 
 
-#include "stdafx.h"
-#include "InputParams.h"
-#include "NeuralNetwork/TrainingData.h"
+class TrainingData;
+typedef std::shared_ptr<TrainingData> TrainingDataPtr;
+typedef std::vector<TrainingDataPtr> TTrainingDataVector;
 
 class IceThicknessGenerator
 {

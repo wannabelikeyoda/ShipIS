@@ -50,18 +50,7 @@ public:
 	//	}
 	//	return value;
 	//};
-
-	static double GetCommonValue( const int func, const double& min, const double& max )
-	{
-		double value = 0;
-		if ( max <= min )
-		{
-			return -1;
-		}
-		std::vector<double> divided_values = DivideIntervalOnCountWithoutEdge( min, max, 5 );
-
-		return divided_values[func];
-	};
+    static double GetCommonValue( const int func, const double& min, const double& max );
 
 	//static MembershipFunc3 GetFuzzyValue( const double& value, const double& min, const double& max )
 	//{
@@ -88,53 +77,12 @@ public:
 	//	return candidat;
 	//};
 
-	static MembershipFunc5 GetFuzzyValue( const double& value, const double& min, const double& max )
-	{
-		std::vector<double> divided_values = DivideIntervalOnCountWithoutEdge( min, max, 5 );
-		for ( auto i = 0; i < (int) divided_values.size(); i++ )
-		{
-			if ( value < divided_values[i] )
-			{
-				if ( i == 0 )
-					return MembershipFunc5( i );
-
-				double to_more = std::abs( value - divided_values[i] );
-				double to_less = std::abs( value - divided_values[i - 1] );
-
-				if ( to_less < to_more )
-					return MembershipFunc5( i - 1 );
-				else
-					return MembershipFunc5( i );
-			}
-		}
-		return MembershipFunc5( divided_values.size() - 1 );
-
-	};
+    static MembershipFunc5 GetFuzzyValue( const double& value, const double& min, const double& max );
 	virtual double GetValue( const double& ) const = 0;
 
 private:
-	static std::vector<double> DivideIntervalOnCount( const double& min, const double& max, const int& count )
-	{
-		std::vector<double> divided_values;
-		double step = ( max - min ) / ( count + 1.0 );
-		for ( int i = 1; i <= count; i++ )
-		{
-			divided_values.push_back( min + i*step );
-		}
-		return divided_values;
-	}
-
-	static std::vector<double> DivideIntervalOnCountWithoutEdge( const double& min, const double& max, const int& count )
-	{
-		std::vector<double> divided_values;
-		double step = ( max - min ) / ( count - 2.0 );
-		for ( int i = 0; i <= count; i++ )
-		{
-			divided_values.push_back( min + i*step );
-		}
-		return divided_values;
-	}
-
+    static std::vector<double> DivideIntervalOnCount( const double& min, const double& max, const int& count );
+    static std::vector<double> DivideIntervalOnCountWithoutEdge( const double& min, const double& max, const int& count );
 };
 
 typedef std::shared_ptr<IFuzzySet> IFuzzySetPtr;
@@ -154,6 +102,9 @@ private:
 	double m_Min;
 	double m_Max;
 };
+
+typedef std::shared_ptr<FuzzySet> FuzzySetPtr;
+
 
 class ActivatedFuzzySet : public FuzzySet
 {

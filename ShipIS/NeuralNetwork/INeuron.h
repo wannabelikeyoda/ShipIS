@@ -1,14 +1,17 @@
 #ifndef I_NEURON_H 
 #define I_NEURON_H
 
-#include "NeuronConnection.h"
-#include "INeuronStrategy.h"
 namespace neural
 {
 class INeuron;
 typedef std::shared_ptr<INeuron> INeuronPtr;
 typedef std::vector<INeuronPtr> TNeurons;
+
 class NeuronConnection;
+typedef std::vector<NeuronConnection> TNeuronConnections;
+
+class INeuronStrategy;
+typedef std::shared_ptr<INeuronStrategy> INeuronStrategyPtr;
 
 class INeuron
 {

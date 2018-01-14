@@ -1,12 +1,14 @@
 #ifndef NEURON_LAYER_H
 #define NEURON_LAYER_H
 
-#include "INeuron.h"
-
 namespace neural
 {
-struct NeuronLayer
+class INeuron;
+typedef std::shared_ptr<INeuron> INeuronPtr;
+typedef std::vector<INeuronPtr> TNeurons;
+class NeuronLayer
 {
+public:
     TNeurons Neurons;
 
     static int NeuronLayerLength( const NeuronLayer& layer )

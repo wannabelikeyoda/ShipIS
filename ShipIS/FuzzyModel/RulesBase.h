@@ -1,11 +1,7 @@
 #ifndef RULES_BASE_H 
 #define RULES_BASE_H
 
-#include "../stdafx.h"
-#include "Rule.h"
 #include "../IceThicknessGenerator.h"
-#include "../InputParams.h"
-#include "../MathVelocityCalculator.h"
 
 namespace fuzzy
 {

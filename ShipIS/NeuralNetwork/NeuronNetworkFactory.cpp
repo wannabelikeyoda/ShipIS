@@ -1,3 +1,4 @@
+#include "../stdafx.h"
 #include "NeuronNetworkFactory.h"
 #include "NeuralNetwork.h"
 #include "BackPropNeuronStrategy.h"

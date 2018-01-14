@@ -1,7 +1,10 @@
-#include "Neuron.h"
 #include "../stdafx.h"
+#include "Neuron.h"
+#include "INeuronStrategy.h"
+
 namespace neural
 {
+
 Neuron::Neuron( const INeuronStrategyPtr& strategy )
     : m_Strategy( strategy ), m_Inputs(), m_ForwardNeurons()
 {

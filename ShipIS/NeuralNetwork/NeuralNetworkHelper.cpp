@@ -1,14 +1,14 @@
-//#include "../stdafx.h"
+#include "../stdafx.h"
 #include "NeuralNetworkHelper.h"
 #include "NeuronNetworkFactory.h"
+#include "TrainingData.h"
+
 namespace neural
 {
-NeuralNetworkHelper::NeuralNetworkHelper( const std::vector<int>& neurons_in_layers,
-    const TTrainingDataVector& training_data_vector,
-    const double& learning_rate )
-    : m_LearningRate( learning_rate )
+NeuralNetworkHelper::NeuralNetworkHelper( const std::vector<int> neurons_in_layers,  const double learning_rate, const TTrainingDataVector& training_data_vector )
+    : m_LearningRate( learning_rate ),
+    m_TrainingDataVector( training_data_vector )
 {
-    m_TrainingDataVector = TTrainingDataVector( training_data_vector );
     if ( !CheckTrainingData() )
     {
         std::cout << "TrainingData has values out of range [0;1]" << " We convert all data to this condition\n"; // TODO: remove everywhere cout 
@@ -16,12 +16,8 @@ NeuralNetworkHelper::NeuralNetworkHelper( const std::vector<int>& neurons_in_lay
     m_NeuralNetwork = std::make_shared<NeuralNetwork>( NeuronNetworkFactory::CreateNetwork( neurons_in_layers, learning_rate ) );
 }
 
-NeuralNetworkHelper::NeuralNetworkHelper( const std::vector<int>& neurons_in_layers, const double & learning_rate )
-{
-    m_NeuralNetwork = std::make_shared<NeuralNetwork>( NeuronNetworkFactory::CreateNetwork( neurons_in_layers, learning_rate ) );
-}
 
-NeuralNetworkHelper::NeuralNetworkHelper( NeuralNetwork* network )
+NeuralNetworkHelper::NeuralNetworkHelper( const NeuralNetwork* network )
 {
     m_NeuralNetwork = std::make_shared<NeuralNetwork>( *network );
 }

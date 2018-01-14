@@ -1,8 +1,8 @@
 #include "../stdafx.h"
-#include "INeuralNetwork.h"
-#include "NeuralNetwork.h"
-#include "Neuron.h"
 #include "NeuronLayer.h"
+#include "Neuron.h"
+#include "NeuralNetwork.h"
+#include "NeuronConnection.h"
 #include "TrainingData.h"
 
 namespace neural

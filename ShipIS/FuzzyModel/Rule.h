@@ -1,10 +1,11 @@
 #ifndef RULE_H 
 #define RULE_H
 
-#include "Condition.h"
-#include "Conclusion.h"
 namespace fuzzy
 {
+
+class Conclusion;
+class Condition;
 class Rule
 {
 public:

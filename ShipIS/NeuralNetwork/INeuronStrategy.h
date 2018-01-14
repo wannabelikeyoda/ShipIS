@@ -5,8 +5,6 @@
 
 namespace neural
 {
-class NeuronConnection;
-typedef std::vector<NeuronConnection> TNeuronConnections;
 
 class INeuronStrategy
 {

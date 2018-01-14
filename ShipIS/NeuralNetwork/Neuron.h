@@ -2,7 +2,6 @@
 #define NEURON_H
 
 #include "INeuron.h"
-#include "BackPropNeuronStrategy.h"
 
 namespace neural
 {

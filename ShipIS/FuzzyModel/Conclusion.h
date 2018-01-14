@@ -1,9 +1,9 @@
 #ifndef CONCLUSION_H 
 #define CONCLUSION_H
 
-#include "Statement.h"
 namespace fuzzy
 {
+class Statement;
 class Conclusion : public Statement
 {
 	typedef Statement base;

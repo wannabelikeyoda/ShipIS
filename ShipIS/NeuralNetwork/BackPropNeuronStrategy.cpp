@@ -1,5 +1,7 @@
 #include "../stdafx.h"
 #include "BackPropNeuronStrategy.h"
+#include "INeuron.h"
+
 namespace neural
 {
 
