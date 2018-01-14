@@ -1,13 +1,11 @@
+#include "../stdafx.h"
 #include "MamdaniAlgorithm.h"
-#include "RulesBase.h"
 #include "Rule.h"
+#include "../InputParams.h"
+#include "FuzzySet.h"
+#include "RulesBase.h"
 #include "Condition.h"
 #include "Conclusion.h"
-#include "FuzzySet.h"
-#include "../InputParams.h"
-
-#include <algorithm> 
-#include <functional>
 
 namespace fuzzy
 {
@@ -81,7 +79,7 @@ std::vector<ActivatedFuzzySet> MamdaniAlgorithm::Activization( const std::vector
         for ( Conclusion conclusion : rule.GetConclusions() )
         {
             auto temp = aggregated_data[i] * conclusion.GetWeight();
-            ActivatedFuzzySet activatedFuzzySet = (ActivatedFuzzySet)conclusion.GetFuzzySet();
+            ActivatedFuzzySet activatedFuzzySet = (ActivatedFuzzySet)( *conclusion.GetFuzzySet() );
             activatedFuzzySet.SetTruthDegree( temp );
             activatedFuzzySets.push_back( activatedFuzzySet );
             i++;

@@ -1,9 +1,10 @@
 #ifndef ICE_THICKNESS_GENERATOR_H 
 #define ICE_THICKNESS_GENERATOR_H 
 
-class TrainingData;
-typedef std::shared_ptr<TrainingData> TrainingDataPtr;
-typedef std::vector<TrainingDataPtr> TTrainingDataVector;
+#include "NeuralNetwork/TrainingData.h"
+
+class IceThicknessGenerator;
+typedef std::shared_ptr<IceThicknessGenerator> IceThicknessGeneratorPtr;
 
 class IceThicknessGenerator
 {
@@ -22,8 +23,7 @@ class GeneratorTrainingForIceThickness
 {
 public:
 	GeneratorTrainingForIceThickness(const IceThicknessGeneratorPtr& generator, InputParams& params);
-
-	TTrainingDataVector GenerateTrainingVector(const int& count);
+    neural::TTrainingDataVector GenerateTrainingVector(const int& count);
 
 private:
 	IceThicknessGeneratorPtr m_IceThicknessGenerator;

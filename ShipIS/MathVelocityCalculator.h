@@ -1,5 +1,6 @@
 #pragma once
-#include "InputParams.h"
+
+class InputParams;
 
 class MathVelocityCalculator
 {

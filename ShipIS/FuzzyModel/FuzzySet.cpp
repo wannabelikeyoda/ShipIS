@@ -1,6 +1,5 @@
 #include "../stdafx.h"
 #include "FuzzySet.h"
-#include <algorithm>
 
 namespace fuzzy
 {

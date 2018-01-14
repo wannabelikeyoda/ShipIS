@@ -1,12 +1,13 @@
 #ifndef MAMDANI_ALGORITHM_H 
 #define MAMDANI_ALGORITHM_H
 
+class InputParams;
+
 namespace fuzzy
 {
 
 class RulesBase;
 typedef std::shared_ptr<RulesBase> RulesBasePtr;
-class InputParams;
 class ActivatedFuzzySet;
 class UnionOfFuzzySets;
 

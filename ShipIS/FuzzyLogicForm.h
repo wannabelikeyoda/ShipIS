@@ -1,5 +1,9 @@
 #pragma once
 #include "FuzzyModel/MamdaniAlgorithm.h"
+#include "FuzzyModel/Rule.h"
+#include "FuzzyModel/Condition.h"
+#include "FuzzyModel/Conclusion.h"
+#include "FuzzyModel/RulesBase.h"
 #include <msclr\marshal_cppstd.h>
 
 namespace ShipIS {

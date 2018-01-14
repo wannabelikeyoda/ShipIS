@@ -1,6 +1,11 @@
-#include "RulesBase.h"
+#include "../stdafx.h"
+#include "../InputParams.h"
+#include "../MathVelocityCalculator.h"
 #include "FuzzySet.h"
+#include "RulesBase.h"
 #include "Rule.h"
+#include "Condition.h"
+#include "Conclusion.h"
 
 namespace fuzzy
 {
@@ -41,7 +46,7 @@ RulesBasePtr RulesBaseGeneratorForIceThickness::GenerateRulesBaseForIceThickness
 	return std::make_shared<RulesBase>( rules );
 }
 
-MembershipFunc5 RulesBaseGeneratorForIceThickness::CreateOutputMembershipFunc( const MembershipFunc5 input1, const MembershipFunc5 input2 )
+MembershipFunc5 RulesBaseGeneratorForIceThickness::CreateOutputMembershipFunc( const MembershipFunc5& input1, const MembershipFunc5& input2 )
 {
 	double input_common1 = IFuzzySet::GetCommonValue( input1, 0, m_Params->max_ice_thick );
 	double input_common2 = IFuzzySet::GetCommonValue( input2, 0, m_Params->max_snow_thick );

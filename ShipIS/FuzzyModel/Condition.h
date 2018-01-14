@@ -1,9 +1,10 @@
 #ifndef CONDITION_H 
 #define CONDITION_H
-#include <string>
+
+#include "Statement.h"
+
 namespace fuzzy
 {
-class Statement;
 class FuzzySet;
 
 class Condition : public Statement

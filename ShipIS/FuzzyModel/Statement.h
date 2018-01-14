@@ -12,7 +12,8 @@ class Statement
 {
 public:
     Statement( const FuzzySet& fuzzy_set, const int& input_variable_id, const std::string& name )
-        : m_FuzzySet( fuzzy_set ), m_InputVariableId( input_variable_id ), m_VariableName( name )
+        : m_FuzzySet( std::make_shared<FuzzySet>( fuzzy_set ) )
+        , m_InputVariableId( input_variable_id ), m_VariableName( name )
     {};
 
     int GetVariable()
@@ -28,7 +29,7 @@ public:
         std::string str;
         str += m_VariableName;
         str += " is ";
-        str += m_FuzzySet.ToStr();
+        str += m_FuzzySet->ToStr();
         return str;
     }
 

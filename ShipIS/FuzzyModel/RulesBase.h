@@ -5,6 +5,8 @@
 
 namespace fuzzy
 {
+class Rule;
+
 class RulesBase
 {
 public:
@@ -38,7 +40,7 @@ public:
 	RulesBasePtr GenerateRulesBaseForIceThickness();
 
 private:
-	MembershipFunc5 CreateOutputMembershipFunc( const MembershipFunc5 input1, const MembershipFunc5 input2 );
+	MembershipFunc5 CreateOutputMembershipFunc( const MembershipFunc5& input1, const MembershipFunc5& input2 );
 private:
 
 	InputParams* m_Params;

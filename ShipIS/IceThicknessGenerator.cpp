@@ -1,5 +1,8 @@
+#include "stdafx.h"
 #include "IceThicknessGenerator.h"
 #include "MathVelocityCalculator.h"
+#include "InputParams.h"
+
 
 IceThicknessGenerator::IceThicknessGenerator(const double & max_value, const double & average_value)
 {  
@@ -32,7 +35,7 @@ GeneratorTrainingForIceThickness::GeneratorTrainingForIceThickness(const IceThic
 	: m_IceThicknessGenerator(generator), m_Params(params)
 { }
 
-TTrainingDataVector GeneratorTrainingForIceThickness::GenerateTrainingVector(const int& count)
+neural::TTrainingDataVector GeneratorTrainingForIceThickness::GenerateTrainingVector(const int& count)
 {
 	std::vector<double> ice_thickness_vector;
 	std::vector<double> snow_thickness_vector;
@@ -55,7 +58,7 @@ TTrainingDataVector GeneratorTrainingForIceThickness::GenerateTrainingVector(con
 
 		velocity_vector.push_back(MathVelocityCalculator::CalculateVelocitySimple(ice_thickness_vector.back(), snow_thickness_vector.back(), m_Params) / m_Params.max_velocity);
 	}
-	return TrainingDataVectorFactory::GenerateTrainingDataVector4(ice_thickness_vector,
+	return neural::TrainingDataVectorFactory::GenerateTrainingDataVector4(ice_thickness_vector,
 																	snow_thickness_vector,
 																	delta_ice_thickness_vector,
 																	delta_snow_thickness_vector,
