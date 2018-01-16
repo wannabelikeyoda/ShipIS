@@ -91,9 +91,12 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\Users\mguriev\Desktop\ShipIS\NeuralLib;C:\Users\mguriev\Desktop\ShipIS\FuzzyLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>FuzzyLib.lib;NeuralLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\mguriev\Desktop\ShipIS\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -139,25 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FuzzyLogicForm.cpp" />
-    <ClCompile Include="FuzzyModel\Conclusion.cpp" />
-    <ClCompile Include="FuzzyModel\Condition.cpp" />
-    <ClCompile Include="FuzzyModel\FuzzySet.cpp" />
-    <ClCompile Include="FuzzyModel\MamdaniAlgorithm.cpp" />
-    <ClCompile Include="FuzzyModel\RulesBase.cpp" />
-    <ClCompile Include="FuzzyModel\Statement.cpp" />
     <ClCompile Include="GraphBlock.cpp" />
     <ClCompile Include="GraphDataGenerator.cpp" />
     <ClCompile Include="GraphsComprasionForm.cpp" />
     <ClCompile Include="IceThicknessGenerator.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="MathVelocityCalculator.cpp" />
-    <ClCompile Include="NeuralNetwork\BackPropNeuronStrategy.cpp" />
-    <ClCompile Include="NeuralNetwork\NeuralNetwork.cpp" />
-    <ClCompile Include="NeuralNetwork\NeuralNetworkHelper.cpp" />
-    <ClCompile Include="NeuralNetwork\Neuron.cpp" />
-    <ClCompile Include="NeuralNetwork\NeuronConnection.cpp" />
-    <ClCompile Include="NeuralNetwork\NeuronNetworkFactory.cpp" />
-    <ClCompile Include="NeuralNetwork\TrainingData.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="TrainNetworkForm.cpp" />
   </ItemGroup>
@@ -166,13 +156,6 @@
     <ClInclude Include="FuzzyLogicForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FuzzyModel\Conclusion.h" />
-    <ClInclude Include="FuzzyModel\Condition.h" />
-    <ClInclude Include="FuzzyModel\FuzzySet.h" />
-    <ClInclude Include="FuzzyModel\MamdaniAlgorithm.h" />
-    <ClInclude Include="FuzzyModel\Rule.h" />
-    <ClInclude Include="FuzzyModel\RulesBase.h" />
-    <ClInclude Include="FuzzyModel\Statement.h" />
     <ClInclude Include="GraphBlock.h" />
     <ClInclude Include="GraphDataGenerator.h" />
     <ClInclude Include="GraphsComprasionForm.h">
@@ -184,17 +167,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MathVelocityCalculator.h" />
-    <ClInclude Include="NeuralNetwork\BackPropNeuronStrategy.h" />
-    <ClInclude Include="NeuralNetwork\INeuralNetwork.h" />
-    <ClInclude Include="NeuralNetwork\INeuron.h" />
-    <ClInclude Include="NeuralNetwork\INeuronStrategy.h" />
-    <ClInclude Include="NeuralNetwork\NeuralNetwork.h" />
-    <ClInclude Include="NeuralNetwork\NeuralNetworkHelper.h" />
-    <ClInclude Include="NeuralNetwork\Neuron.h" />
-    <ClInclude Include="NeuralNetwork\NeuronConnection.h" />
-    <ClInclude Include="NeuralNetwork\NeuronLayer.h" />
-    <ClInclude Include="NeuralNetwork\NeuronNetworkFactory.h" />
-    <ClInclude Include="NeuralNetwork\TrainingData.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TrainNetworkForm.h">
       <FileType>CppForm</FileType>

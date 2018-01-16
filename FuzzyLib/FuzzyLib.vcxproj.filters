@@ -15,82 +15,58 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MainForm.cpp">
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ShipIS\FuzzyModel\Conclusion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TrainNetworkForm.cpp">
+    <ClCompile Include="..\ShipIS\FuzzyModel\Condition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GraphBlock.cpp">
+    <ClCompile Include="..\ShipIS\FuzzyModel\FuzzySet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GraphDataGenerator.cpp">
+    <ClCompile Include="..\ShipIS\FuzzyModel\MamdaniAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FuzzyLogicForm.cpp">
+    <ClCompile Include="..\ShipIS\FuzzyModel\RulesBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GraphsComprasionForm.cpp">
+    <ClCompile Include="..\ShipIS\FuzzyModel\Statement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IceThicknessGenerator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MathVelocityCalculator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MainForm.h">
+    <ClInclude Include="..\ShipIS\FuzzyModel\Conclusion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DiagramDrawer.h">
+    <ClInclude Include="..\ShipIS\FuzzyModel\Condition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TrainNetworkForm.h">
+    <ClInclude Include="..\ShipIS\FuzzyModel\FuzzySet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphBlock.h">
+    <ClInclude Include="..\ShipIS\FuzzyModel\MamdaniAlgorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphDataGenerator.h">
+    <ClInclude Include="..\ShipIS\FuzzyModel\Rule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphsComprasionForm.h">
+    <ClInclude Include="..\ShipIS\FuzzyModel\RulesBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FuzzyLogicForm.h">
+    <ClInclude Include="..\ShipIS\FuzzyModel\Statement.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InputParams.h">
-      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IceThicknessGenerator.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MathVelocityCalculator.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MainForm.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FuzzyLogicForm.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GraphsComprasionForm.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

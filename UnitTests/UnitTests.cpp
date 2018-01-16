@@ -1,45 +1,34 @@
 // UnitTests.cpp : Defines the entry point for the console application.
 //
 #include "stdafx.h"
-#include <igloo/igloo_alt.h>
+#include <igloo/igloo.h>
+#include "../NeuralLib/NeuralNetwork/NeuralNetwork.h"
+#include "../NeuralLib/NeuralNetwork/Neuron.h"
+#include "../NeuralLib/NeuralNetwork/NeuronConnection.h"
+#include "../NeuralLib/NeuralNetwork/TrainingData.h"
+#include "../NeuralLib/NeuralNetwork/NeuralNetworkHelper.h"
 
-//Describe( a_guitar_with_a_fuzzbox )
-//{
-//    void SetUp()
-//    {
-//        guitar.AddEffect( fuzzbox );
-//    }
-//
-//    It( starts_in_clean_mode )
-//    {
-//        Assert::That( guitar.Sound(), Equals( Clean ) );
-//    }
-//
-//    Describe( in_distorted_mode )
-//    {
-//        void SetUp()
-//        {
-//            Parent().fuzzbox.Switch();
-//        }
-//
-//        It( sounds_distorted )
-//        {
-//            Assert::That( Parent().guitar.Sound(), Equals( Distorted ) );
-//        }
-//
-//        It( sounds_clean_when_I_switch_the_fuzzbox )
-//        {
-//            Parent().fuzzbox.Switch();
-//            Assert::That( Parent().guitar.Sound(), Equals( Clean ) );
-//        }
-//    };
-//
-//    Fuzzbox fuzzbox;
-//    Guitar guitar;
-//};
+using namespace igloo;
+using namespace neural;
 
-int main( int argc, const char *argv[] )
+
+Context(NeuralNetworkContructor)
 {
-    return igloo::TestRunner::RunAllTests( argc, argv );
+    Spec(DefaultConstructorWorksFine)
+    {
+        const std::vector<int> neurons_in_layers = { 2,2,2 };
+        const double learning_rate = 0.5;
+        //auto network = new NeuralNetwork();
+        auto helper = new neural::NeuralNetworkHelper( neurons_in_layers, learning_rate );
+        //auto neural_network = new neural::NeuralNetwork();
+        Assert::That( helper->GetNetwork()->GetInputLayer().Neurons[0]->GetBias(), Equals( 0 ) );
+    }
+};
+
+int main( int argc, const char* argv[] )
+{
+    auto result = igloo::TestRunner::RunAllTests( argc, argv );
+    std::system( "pause" );
+    return result;
 }
 
