@@ -53,9 +53,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NeuralNetwork\BackPropNeuronStrategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="NeuralNetwork\NeuralNetwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -72,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NeuralNetwork\TrainingData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNetwork\BackPropNeuronStrategy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
